@@ -2,7 +2,7 @@ FROM amazonlinux:latest
 
 RUN yum install -y gcc-c++ make && \
     curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
-    yum install -y nodejs python-pip python3 unzip && \
+    yum install -y nodejs mysql-devel python-devel python-pip python3 tar gzip unzip && \
     yum clean all && \
     rm -rf /var/cache/yum
 
